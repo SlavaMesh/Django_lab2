@@ -72,7 +72,7 @@ class PostCategory(models.Model):
 
 
 class Comment(models.Model):
-    post = models.ForeignKey('Post', on_delete=models.CASCADE, related_name='comments_to-post')
+    post = models.ForeignKey('Post', on_delete=models.CASCADE, related_name='comments_to_post')
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='comments')
     text = models.TextField(blank=False)
     date = models.DateTimeField(auto_now_add=True)
